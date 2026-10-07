@@ -20,9 +20,10 @@ print ('########################################################################
 ## for mit break:
 reihe = [1,2,3,4,5,6,7,8,9,]
 for i in reihe:
+    print(i)
     if i== 6:
         break
-    print(i)
+    
 
 print ('####################################################################################################')
 
@@ -45,9 +46,16 @@ class Haus:
 
 try:                    ## ist wie try, catch in java. except ist hier einfach das catch
     print(91/0)
-
+                        ## try catch finally in java
+                        ## in python gibt es try, except, else, finally
 except ZeroDivisionError:
     print("Division durch 0")
+else:
+    print("Keine Division durch 0")
+finally:                    ## wird immer ausgeführt das man Rückmeldung gibt, keine Daten verloren gehen, wenn man datei öffnet 
+                            ## dann fehler läuft dann ist datei immer noch offen gleich wie in datenbank offen ist. 
+                            ## Deshalb im finally für ressourcen die was großes aufmachen und bearbeiten das es geschlossen wird
+    print("Dieser Code wird immer ausgeführt")
 
 print ('####################################################################################################')
 
